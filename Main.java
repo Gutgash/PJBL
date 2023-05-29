@@ -6,5 +6,11 @@ public class Main {
         Skin bucky = new Shotguns("Sublime", "Dourado","Branco", 70);
         Skin shorty = new Shotguns("Chronovoid","Roxo", "Azul", 90);
     }
+    private float valorCompra = 0f;
+    public ArrayList<Skins> skins;
+    public void calculaCompra(){
+        for (var skin: skins)
+            valorCompra += skin.getPreco();
+    }
 
 }
