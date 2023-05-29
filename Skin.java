@@ -10,5 +10,8 @@ public abstract class Skin {
         this.corSecundaria = corSecundaria;
         this.preco = preco;
     }
+     public float getPreco(){
+        return preco;
+    }
 
 }
