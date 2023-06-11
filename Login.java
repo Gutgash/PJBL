@@ -2,6 +2,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
 import java.lang.Exception;
+import java.util.Scanner;
 
 class CreateLoginForm extends JFrame implements ActionListener
 {
@@ -46,18 +47,19 @@ class CreateLoginForm extends JFrame implements ActionListener
         String userValue = textField1.getText();
         String passValue = textField2.getText();
 
-        if (userValue.equals("test#0000") && passValue.equals("test")) {
+        if (userValue.length() == 9 && passValue.length() >= 8) {
 
             NewPage page = new NewPage();
 
             page.setVisible(true);
 
-            JLabel wel_label = new JLabel("Welcome: "+userValue);
+            JLabel wel_label = new JLabel("Welcome: " + userValue);
             page.getContentPane().add(wel_label);
         }
-        else{
-            System.out.println("Please enter valid username and password");
+        else {
+            System.out.println("Login or Password not correct");
         }
+
     }
 }
 
