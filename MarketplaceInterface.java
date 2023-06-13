@@ -2,6 +2,7 @@ package components;
 import java.awt.*;
 import java.awt.event.*;
 import java.io.IOException;
+import java.util.Calendar;
 import javax.swing.*;
 import components.txtReader;
 
@@ -32,8 +33,8 @@ public class MarketplaceInterface extends JPanel implements ActionListener {
 
     public void actionPerformed(ActionEvent e) {
         JComboBox cb = (JComboBox)e.getSource();
-        String petName = (String)cb.getSelectedItem();
-        updateLabel(petName);
+        String skinName = (String)cb.getSelectedItem();
+        updateLabel(skinName);
     }
 
     protected void updateLabel(String name) {
@@ -73,7 +74,7 @@ public class MarketplaceInterface extends JPanel implements ActionListener {
         frame.setVisible(true);
     }
 
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args) {
 
         javax.swing.SwingUtilities.invokeLater(new Runnable() {
             public void run() {
@@ -81,4 +82,5 @@ public class MarketplaceInterface extends JPanel implements ActionListener {
             }
         });
     }
+
 }
