@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 public class Marketplace {
-    private ArrayList<Rifles> rifles;
-    private ArrayList<Shotguns> shotguns;
+    private ArrayList<Skin> rifles;
+    private ArrayList<Skin> shotguns;
     private float valorCompra;
     private float valorRifles;
     private float valorShotguns;
@@ -11,11 +11,11 @@ public class Marketplace {
         shotguns = new ArrayList<>();
         this.valorCompra = 0f;
     }
-    public void addRifle(Rifles rifle){
+    public void addRifle(Skin rifle){
         rifles.add(rifle);
         System.out.println("A arma " + rifle.getNomeA() + " com a skin " + rifle.getNomeS() + " foi adcionado com sucesso!");
     }
-    public void addShotgun(Shotguns shotgun){
+    public void addShotgun(Skin shotgun){
         shotguns.add(shotgun);
         System.out.println("A arma " + shotgun.getNomeA() + " com a skin " + shotgun.getNomeS() + " foi adcionado com sucesso!");
     }
@@ -44,9 +44,19 @@ public class Marketplace {
         }
     }
     public void caixaFinal(){
+        try {
+            if(rifles.size() == 0) throw new SemArma("Não há rifles na compra");
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
         if(rifles.size() !=0 ){
             float total = rifles.get(0).getPreco()*rifles.size();
             System.out.println("O valor total dos rifles é de " + valorRifles);
+        }
+        try {
+            if (shotguns.size() == 0) throw new SemArma("Não há shotguns na compra");
+        } catch (Exception e) {
+            e.printStackTrace();
         }
         if(shotguns.size() != 0){
             float total = shotguns.get(0).getPreco()*shotguns.size();

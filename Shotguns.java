@@ -8,15 +8,4 @@ public class Shotguns extends Skin {
     public String getNomeA(){
         return nomeA;
     }
-    public String getNomeS(){
-        return nomeS;
-    }
-    public float getPreco(){
-        return preco;
-    }
-
-    public float promoMercadoNoturno(float k){
-        return preco*k;
-    }
 }
-

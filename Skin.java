@@ -1,10 +1,10 @@
 public abstract class Skin {
-    public String nomeS;
+    private String nomeS;
     private String cor1;
     private String cor2;
     private String cor3;
     private String cor4;
-    public float preco;
+    private float preco;
 
     public Skin(String nomeS, String cor1, String cor2, String cor3, String cor4, float preco){
         this.nomeS = nomeS;
@@ -14,5 +14,12 @@ public abstract class Skin {
         this.cor4 = cor4;
         this.preco = preco;
     }
-    public abstract float promoMercadoNoturno(float k);
+    public abstract String getNomeA();
+    public String getNomeS(){
+        return nomeS;
+    }
+    public float getPreco(){
+        return preco;
+    }
+    //public abstract float promoMercadoNoturno(float k);
 }
