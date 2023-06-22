@@ -103,6 +103,6 @@ public class Marketplace {
 
         System.out.println("Valor total de tudo é: " + valorCompra);
         System.out.println("Valor total das promoçoes é: " + valorCompraPromo);
-        System.out.println("Valor total para fazer upgrade das armas ao nivel total é " + valorTotalRadianita);
+        System.out.println("Valor total para fazer upgrade das armas ao nivel total é " + valorTotalRadianita + " Radianitas");
     }
 }
