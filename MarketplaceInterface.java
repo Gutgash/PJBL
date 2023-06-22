@@ -15,17 +15,17 @@ public class MarketplaceInterface extends JPanel implements ActionListener {
         String[] skinsStrings = { "Vandal Prime", "Vandal Sakura", "Phantom Nebula", "Phantom Glitchpop"};
 
         JComboBox petList = new JComboBox(skinsStrings);
-        petList.setSelectedIndex(3);
-        petList.addActionListener(this);
+        skinList.setSelectedIndex(3);
+        skinList.addActionListener(this);
 
         picture = new JLabel();
         picture.setFont(picture.getFont().deriveFont(Font.ITALIC));
         picture.setHorizontalAlignment(JLabel.CENTER);
-        updateLabel(skinsStrings[petList.getSelectedIndex()]);
+        updateLabel(skinsStrings[skinList.getSelectedIndex()]);
         picture.setBorder(BorderFactory.createEmptyBorder(10,0,0,0));
         picture.setPreferredSize(new Dimension(1000, 700+10));
 
-        add(petList, BorderLayout.PAGE_START);
+        add(skinList, BorderLayout.PAGE_START);
         add(picture, BorderLayout.PAGE_END);
         setBorder(BorderFactory.createEmptyBorder(20,20,20,20));
     }
