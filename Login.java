@@ -63,7 +63,7 @@ class CreateLoginForm extends JFrame implements ActionListener
 
 class LoginFormDemo
 {
-    public static void main(String arg[])
+    public static void main(String args[])
     {
         try
         {
