@@ -3,8 +3,11 @@ public class Marketplace {
     private ArrayList<Skin> rifles;
     private ArrayList<Skin> shotguns;
     private float valorCompra;
+    private float valorCompraPromo;
     private float valorRifles;
     private float valorShotguns;
+    private float valorRiflesPromo;
+    private float valorShotgunsPromo;
 
     public Marketplace(){
         rifles = new ArrayList<>();
@@ -30,9 +33,19 @@ public class Marketplace {
             valorRifles += rifle.getPreco();
         }
     }
+    public void calculaRiflesPromo(){
+        for (var rifle: rifles){
+            valorRiflesPromo += rifle.promoMercadoNoturno(1);
+        }
+    }
     public void calculaShotguns(){
         for (var shotgun: shotguns){
             valorShotguns += shotgun.getPreco();
+        }
+    }
+    public void calculaShotgunsPromo(){
+        for (var shotgun: shotguns){
+            valorShotgunsPromo += shotgun.promoMercadoNoturno(1);
         }
     }
     public void calculaValorCompra(){
@@ -41,6 +54,14 @@ public class Marketplace {
         }
         for (var shotgun: shotguns){
             valorCompra += shotgun.getPreco();
+        }
+    }
+    public void calculaValorPromo(){
+        for (var rifle: rifles){
+            valorCompraPromo += rifle.promoMercadoNoturno(1);
+        }
+        for (var shotgun: shotguns){
+            valorCompraPromo += shotgun.promoMercadoNoturno(1);
         }
     }
     public void caixaFinal(){
@@ -53,6 +74,10 @@ public class Marketplace {
             float total = rifles.get(0).getPreco()*rifles.size();
             System.out.println("O valor total dos rifles é de " + valorRifles);
         }
+        if(rifles.size() >=4 ){
+            float total = rifles.get(0).getPreco()*rifles.size();
+            System.out.println("O valor total dos rifles com o mercado noturno é de " + valorRiflesPromo);
+        }
         try {
             if (shotguns.size() == 0) throw new SemArma("Não há shotguns na compra");
         } catch (Exception e) {
@@ -62,6 +87,11 @@ public class Marketplace {
             float total = shotguns.get(0).getPreco()*shotguns.size();
             System.out.println("O valor total das shotguns é de " + valorShotguns);
         }
+        if(shotguns.size() >= 4){
+            float total = shotguns.get(0).getPreco()*shotguns.size();
+            System.out.println("O valor total das shotguns com o mercado noturno é de " + valorShotgunsPromo);
+        }
         System.out.println("Valor total de tudo é: " + valorCompra);
+        System.out.println("Valor total das promoçoes é: " + valorCompraPromo);
     }
 }

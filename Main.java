@@ -18,8 +18,11 @@ public class Main {
         marketplace.addShotgun(shotgun2);
         marketplace.addShotgun(shotgun3);
         marketplace.calculaRifles();
+        marketplace.calculaRiflesPromo();
         marketplace.calculaShotguns();
+        marketplace.calculaShotgunsPromo();
         marketplace.calculaValorCompra();
+        marketplace.calculaValorPromo();
         marketplace.caixaFinal();
     }
 }

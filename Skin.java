@@ -21,5 +21,7 @@ public abstract class Skin {
     public float getPreco(){
         return preco;
     }
-    //public abstract float promoMercadoNoturno(float k);
+    public float promoMercadoNoturno(float k){
+        return getPreco()*k;
+    }
 }

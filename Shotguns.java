@@ -8,4 +8,8 @@ public class Shotguns extends Skin {
     public String getNomeA(){
         return nomeA;
     }
+    @Override
+    public float promoMercadoNoturno(float k){
+        return (getPreco()/3)*k;
+    }
 }
