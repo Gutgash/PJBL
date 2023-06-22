@@ -12,7 +12,6 @@ class CreateLoginForm extends JFrame implements ActionListener
     JLabel userLabel, passLabel;
     final JTextField  textField1, textField2;
 
-    //calling constructor
     CreateLoginForm()
     {
 
@@ -49,12 +48,11 @@ class CreateLoginForm extends JFrame implements ActionListener
 
         if (userValue.length() == 9 && passValue.length() >= 8) {
 
-            NewPage page = new NewPage();
-
-            page.setVisible(true);
-
-            JLabel wel_label = new JLabel("Welcome: " + userValue);
-            page.getContentPane().add(wel_label);
+            javax.swing.SwingUtilities.invokeLater(new Runnable() {
+                public void run() {
+                    MarketplaceInterface.createAndShowGUI();
+                }
+            });
         }
         else {
             System.out.println("Login or Password not correct");
@@ -77,16 +75,5 @@ class LoginFormDemo
         {
             JOptionPane.showMessageDialog(null, e.getMessage());
         }
-    }
-}
-
-class NewPage extends JFrame
-{
-    NewPage()
-    {
-        setDefaultCloseOperation(javax.swing.
-                WindowConstants.DISPOSE_ON_CLOSE);
-        setTitle("Welcome");
-        setSize(400, 200);
     }
 }
