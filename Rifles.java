@@ -13,5 +13,8 @@ public class Rifles extends Skin{
     public float promoMercadoNoturno(float k){
         return (getPreco()/2)*k;
     }
+    public float upgradeRadianita(){
+        return 15f;
+    }
 
 }

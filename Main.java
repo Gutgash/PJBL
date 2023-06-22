@@ -23,6 +23,7 @@ public class Main {
         marketplace.calculaShotgunsPromo();
         marketplace.calculaValorCompra();
         marketplace.calculaValorPromo();
+        marketplace.mostrarPrecoRadianita();
         marketplace.caixaFinal();
     }
 }

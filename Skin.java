@@ -24,4 +24,5 @@ public abstract class Skin {
     public float promoMercadoNoturno(float k){
         return getPreco()*k;
     }
+    public abstract float upgradeRadianita();
 }
