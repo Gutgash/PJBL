@@ -1,10 +1,8 @@
-package components;
 import java.awt.*;
 import java.awt.event.*;
 import java.io.IOException;
 import java.util.Calendar;
 import javax.swing.*;
-import components.txtReader;
 
 public class MarketplaceInterface extends JPanel implements ActionListener {
     JLabel picture;
@@ -14,7 +12,7 @@ public class MarketplaceInterface extends JPanel implements ActionListener {
 
         String[] skinsStrings = { "Vandal Prime", "Vandal Sakura", "Phantom Nebula", "Phantom Glitchpop"};
 
-        JComboBox petList = new JComboBox(skinsStrings);
+        JComboBox skinList = new JComboBox(skinsStrings);
         skinList.setSelectedIndex(3);
         skinList.addActionListener(this);
 
@@ -62,7 +60,7 @@ public class MarketplaceInterface extends JPanel implements ActionListener {
             return null;
         }
     }
-    private static void createAndShowGUI() {
+    static void createAndShowGUI() {
         JFrame frame = new JFrame("Rifles");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
